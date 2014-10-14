@@ -7,17 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4391F819EAFE1700CCEDEF /* StringMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4391F719EAFE1700CCEDEF /* StringMath.swift */; };
+		9B4391F919EAFE1700CCEDEF /* StringMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4391F719EAFE1700CCEDEF /* StringMath.swift */; };
+		9B4391FB19EB1A0300CCEDEF /* StringMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4391FA19EB1A0300CCEDEF /* StringMathTests.swift */; };
+		9BE65D8119E596EB00D92AD9 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE65D8019E596EB00D92AD9 /* Logic.swift */; };
+		9BE65D8219E596EB00D92AD9 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE65D8019E596EB00D92AD9 /* Logic.swift */; };
+		9BE65D8419E597D000D92AD9 /* LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE65D8319E597D000D92AD9 /* LogicTests.swift */; };
 		9BEC144719E0BE15004584F4 /* MultiMathFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BEC144619E0BE15004584F4 /* MultiMathFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BEC145119E0BE15004584F4 /* MultiMathFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC145019E0BE15004584F4 /* MultiMathFrameworkTests.swift */; };
+		9BEC145B19E0BE35004584F4 /* PhysicalMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC145A19E0BE35004584F4 /* PhysicalMeasurement.swift */; };
+		9BEC145C19E0BE35004584F4 /* PhysicalMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC145A19E0BE35004584F4 /* PhysicalMeasurement.swift */; };
+		9BEC147019E0CEEF004584F4 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC146F19E0CEEF004584F4 /* Bag.swift */; };
+		9BEC147119E0CEEF004584F4 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC146F19E0CEEF004584F4 /* Bag.swift */; };
+		9BEC147319E0E9AB004584F4 /* PhysicalMeasurementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC147219E0E9AB004584F4 /* PhysicalMeasurementTests.swift */; };
+		9BEC147519E0EA69004584F4 /* ComplexMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC147419E0EA69004584F4 /* ComplexMath.swift */; };
+		9BEC147619E0EA69004584F4 /* ComplexMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC147419E0EA69004584F4 /* ComplexMath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B4391F719EAFE1700CCEDEF /* StringMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringMath.swift; sourceTree = "<group>"; };
+		9B4391FA19EB1A0300CCEDEF /* StringMathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringMathTests.swift; sourceTree = "<group>"; };
+		9BE65D8019E596EB00D92AD9 /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		9BE65D8319E597D000D92AD9 /* LogicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicTests.swift; sourceTree = "<group>"; };
 		9BEC144119E0BE15004584F4 /* MultiMathFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiMathFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEC144519E0BE15004584F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BEC144619E0BE15004584F4 /* MultiMathFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiMathFramework.h; sourceTree = "<group>"; };
 		9BEC144C19E0BE15004584F4 /* MultiMathFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiMathFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEC144F19E0BE15004584F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BEC145019E0BE15004584F4 /* MultiMathFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMathFrameworkTests.swift; sourceTree = "<group>"; };
+		9BEC145A19E0BE35004584F4 /* PhysicalMeasurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicalMeasurement.swift; sourceTree = "<group>"; };
+		9BEC146F19E0CEEF004584F4 /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bag.swift; path = ../../CollectionsFramework/CollectionsFramework/Bag.swift; sourceTree = "<group>"; };
+		9BEC147219E0E9AB004584F4 /* PhysicalMeasurementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicalMeasurementTests.swift; sourceTree = "<group>"; };
+		9BEC147419E0EA69004584F4 /* ComplexMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexMath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +80,12 @@
 		9BEC144319E0BE15004584F4 /* MultiMathFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9BEC146F19E0CEEF004584F4 /* Bag.swift */,
 				9BEC144619E0BE15004584F4 /* MultiMathFramework.h */,
+				9BEC145A19E0BE35004584F4 /* PhysicalMeasurement.swift */,
+				9BEC147419E0EA69004584F4 /* ComplexMath.swift */,
+				9BE65D8019E596EB00D92AD9 /* Logic.swift */,
+				9B4391F719EAFE1700CCEDEF /* StringMath.swift */,
 				9BEC144419E0BE15004584F4 /* Supporting Files */,
 			);
 			path = MultiMathFramework;
@@ -77,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				9BEC145019E0BE15004584F4 /* MultiMathFrameworkTests.swift */,
+				9BEC147219E0E9AB004584F4 /* PhysicalMeasurementTests.swift */,
+				9BE65D8319E597D000D92AD9 /* LogicTests.swift */,
+				9B4391FA19EB1A0300CCEDEF /* StringMathTests.swift */,
 				9BEC144E19E0BE15004584F4 /* Supporting Files */,
 			);
 			path = MultiMathFrameworkTests;
@@ -196,6 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE65D8119E596EB00D92AD9 /* Logic.swift in Sources */,
+				9BEC147019E0CEEF004584F4 /* Bag.swift in Sources */,
+				9BEC145B19E0BE35004584F4 /* PhysicalMeasurement.swift in Sources */,
+				9BEC147519E0EA69004584F4 /* ComplexMath.swift in Sources */,
+				9B4391F819EAFE1700CCEDEF /* StringMath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +238,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BEC145119E0BE15004584F4 /* MultiMathFrameworkTests.swift in Sources */,
+				9BEC147619E0EA69004584F4 /* ComplexMath.swift in Sources */,
+				9BEC147119E0CEEF004584F4 /* Bag.swift in Sources */,
+				9B4391FB19EB1A0300CCEDEF /* StringMathTests.swift in Sources */,
+				9BEC145C19E0BE35004584F4 /* PhysicalMeasurement.swift in Sources */,
+				9B4391F919EAFE1700CCEDEF /* StringMath.swift in Sources */,
+				9BE65D8419E597D000D92AD9 /* LogicTests.swift in Sources */,
+				9BE65D8219E596EB00D92AD9 /* Logic.swift in Sources */,
+				9BEC147319E0E9AB004584F4 /* PhysicalMeasurementTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,30 +340,43 @@
 		9BEC145519E0BE15004584F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/CollectionsFramework-agjxebssyoxpqbekupramnhegidu/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = MultiMathFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9BEC145619E0BE15004584F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/CollectionsFramework-agjxebssyoxpqbekupramnhegidu/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = MultiMathFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -374,6 +429,7 @@
 				9BEC145619E0BE15004584F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BEC145719E0BE15004584F4 /* Build configuration list for PBXNativeTarget "MultiMathFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -382,6 +438,7 @@
 				9BEC145919E0BE15004584F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
