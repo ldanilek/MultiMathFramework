@@ -219,11 +219,11 @@ infix operator ≥ {associativity none precedence 130}
 infix operator ≤ {associativity none precedence 130}
 
 func ~~ (r: Double, s: Double) -> Bool {
-    if abs(r)<0.0001 {
-        return s<0.000001
+    if abs(r)<0.00001 {
+        return abs(s)<0.000001
     }
     if abs(s)<0.000001 {
-        return s<0.000001
+        return abs(r)<0.000001
     }
     return abs(s-r) / abs(r) < 0.01
 }

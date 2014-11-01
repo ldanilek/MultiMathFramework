@@ -209,6 +209,14 @@ class PhysicalMeasurementTests: XCTestCase {
         println(other.computed().description)
         println()
     }
+    
+    func testLists() {
+        var voltList = applyUnits([5±1, 6.3±0.4, 9.5±1.2], volts)
+        var ampList = applyUnits([2±0.03, 2.5±0.4, 5±2.1], amps)
+        var ohmList = listCompute({ms in ms[0]/ms[1]}, voltList, ampList)
+        var meanOhms = mean(ohmList)
+        XCTAssert(meanOhms ~~ (2.3066666±0.6148)*ohms, "calculate one column from another, then take the mean")
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

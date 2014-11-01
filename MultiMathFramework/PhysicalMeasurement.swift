@@ -32,7 +32,7 @@ enum UnitType {
 }
 
 enum Unit : Printable {
-    case Meters, Kilometers, Miles, Centimeters, Millimeters
+    case Meters, Kilometers, Miles, Decimeters, Centimeters, Millimeters
     case Seconds, Hours
     case Kilograms, Grams
     case Degrees, Radians
@@ -46,6 +46,8 @@ enum Unit : Printable {
         switch self {
         case .Meters, .Seconds, .Kilograms, .Radians, .Amperes:
             factor = 1.0
+        case .Decimeters:
+            factor = 0.1
         case .Kilometers:
             factor = 1000.0
         case .Miles:
@@ -66,7 +68,7 @@ enum Unit : Printable {
     
     var type: UnitType {
         switch self {
-        case .Miles, .Kilometers, .Meters, .Centimeters, .Millimeters:
+        case .Miles, .Kilometers, .Meters, .Centimeters, .Millimeters, .Decimeters:
             return .Distance
         case .Seconds, .Hours:
             return .Time
@@ -105,6 +107,8 @@ enum Unit : Printable {
             return "mm"
         case .Amperes:
             return "A"
+        case .Decimeters:
+            return "dm"
             }
     }
 }
@@ -243,6 +247,7 @@ let watts = joules/second
 let volts = watts / amps
 let ohms = watts / amps**2
 let hertz = second**(-1)
+let liter = Unit.Decimeters**3
 
 //speed of light is c velocity. Don't want to use c, because that will cause all sorts of conflicts
 let cv = 299792458 * meters/second //this value has no error, because meters are defined to make this exactly true
@@ -805,4 +810,30 @@ func mean(ms: MList) -> M {
     return M(v: totalSum/count, e: sqrt(squaredErrorSum/count), units: ms.last?.u ?? unitless)
 }
 
-func listCompute(operation: (M...->M), MList...)
+//I want to be able to make a new list by combining lists. for example, if I have a list of voltages and currents, I want to be able to make a list of resistances by doing V/I
+//operation must take the same size list as the count of columns
+func listCompute(operation: [M]->FE, columns: MList...) -> MList {
+    var output: [M] = []
+    for index in 0..<columns.last!.count {
+        var inputs: [M] = []
+        for column in columns {
+            inputs.append(column[index])
+        }
+        output.append(operation(inputs).computed([:]))
+    }
+    return output
+}
+func applyUnits(ms: MList, u: SpecificUnits) -> MList {
+    var output: MList = []
+    for input in ms {
+        output.append(input*u)
+    }
+    return output
+}
+func applyUnits(ms: MList, u: Unit) -> MList {
+    var output: MList = []
+    for input in ms {
+        output.append(input*u)
+    }
+    return output
+}

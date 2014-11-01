@@ -10,6 +10,9 @@
 		9B4391F819EAFE1700CCEDEF /* StringMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4391F719EAFE1700CCEDEF /* StringMath.swift */; };
 		9B4391F919EAFE1700CCEDEF /* StringMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4391F719EAFE1700CCEDEF /* StringMath.swift */; };
 		9B4391FB19EB1A0300CCEDEF /* StringMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4391FA19EB1A0300CCEDEF /* StringMathTests.swift */; };
+		9BDCD8FA19F83A90008C48D5 /* Matrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCD8F919F83A90008C48D5 /* Matrices.swift */; };
+		9BDCD8FB19F83A90008C48D5 /* Matrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCD8F919F83A90008C48D5 /* Matrices.swift */; };
+		9BDCD8FD19F83B1F008C48D5 /* MatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCD8FC19F83B1F008C48D5 /* MatrixTests.swift */; };
 		9BE65D8119E596EB00D92AD9 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE65D8019E596EB00D92AD9 /* Logic.swift */; };
 		9BE65D8219E596EB00D92AD9 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE65D8019E596EB00D92AD9 /* Logic.swift */; };
 		9BE65D8419E597D000D92AD9 /* LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE65D8319E597D000D92AD9 /* LogicTests.swift */; };
@@ -27,6 +30,8 @@
 /* Begin PBXFileReference section */
 		9B4391F719EAFE1700CCEDEF /* StringMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringMath.swift; sourceTree = "<group>"; };
 		9B4391FA19EB1A0300CCEDEF /* StringMathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringMathTests.swift; sourceTree = "<group>"; };
+		9BDCD8F919F83A90008C48D5 /* Matrices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrices.swift; sourceTree = "<group>"; };
+		9BDCD8FC19F83B1F008C48D5 /* MatrixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTests.swift; sourceTree = "<group>"; };
 		9BE65D8019E596EB00D92AD9 /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		9BE65D8319E597D000D92AD9 /* LogicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicTests.swift; sourceTree = "<group>"; };
 		9BEC144119E0BE15004584F4 /* MultiMathFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiMathFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +91,7 @@
 				9BEC147419E0EA69004584F4 /* ComplexMath.swift */,
 				9BE65D8019E596EB00D92AD9 /* Logic.swift */,
 				9B4391F719EAFE1700CCEDEF /* StringMath.swift */,
+				9BDCD8F919F83A90008C48D5 /* Matrices.swift */,
 				9BEC144419E0BE15004584F4 /* Supporting Files */,
 			);
 			path = MultiMathFramework;
@@ -106,6 +112,7 @@
 				9BEC147219E0E9AB004584F4 /* PhysicalMeasurementTests.swift */,
 				9BE65D8319E597D000D92AD9 /* LogicTests.swift */,
 				9B4391FA19EB1A0300CCEDEF /* StringMathTests.swift */,
+				9BDCD8FC19F83B1F008C48D5 /* MatrixTests.swift */,
 				9BEC144E19E0BE15004584F4 /* Supporting Files */,
 			);
 			path = MultiMathFrameworkTests;
@@ -230,6 +237,7 @@
 				9BEC145B19E0BE35004584F4 /* PhysicalMeasurement.swift in Sources */,
 				9BEC147519E0EA69004584F4 /* ComplexMath.swift in Sources */,
 				9B4391F819EAFE1700CCEDEF /* StringMath.swift in Sources */,
+				9BDCD8FA19F83A90008C48D5 /* Matrices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +248,10 @@
 				9BEC145119E0BE15004584F4 /* MultiMathFrameworkTests.swift in Sources */,
 				9BEC147619E0EA69004584F4 /* ComplexMath.swift in Sources */,
 				9BEC147119E0CEEF004584F4 /* Bag.swift in Sources */,
+				9BDCD8FB19F83A90008C48D5 /* Matrices.swift in Sources */,
 				9B4391FB19EB1A0300CCEDEF /* StringMathTests.swift in Sources */,
 				9BEC145C19E0BE35004584F4 /* PhysicalMeasurement.swift in Sources */,
+				9BDCD8FD19F83B1F008C48D5 /* MatrixTests.swift in Sources */,
 				9B4391F919EAFE1700CCEDEF /* StringMath.swift in Sources */,
 				9BE65D8419E597D000D92AD9 /* LogicTests.swift in Sources */,
 				9BE65D8219E596EB00D92AD9 /* Logic.swift in Sources */,
