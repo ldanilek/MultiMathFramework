@@ -275,7 +275,7 @@ protocol FE : Printable {
 
 //physical measurement. represents value, error, and units
 //units are represented by generic UnitTypes, so for instance all measurements are automatically converted to the default unit for each type.
-struct M : FE, Equatable, Similarity, Printable {
+struct M : FE, Printable, Similarity {
     let v: Double
     let e: Double
     let u: Units
@@ -426,7 +426,7 @@ struct Variable : FE, Printable, Hashable {
         if let val = vars[self] {
             return val
         }
-        return M()
+        return M(0)
     }
     
     func computedIgnoringError(vars: [Variable : M]) -> M {
@@ -469,7 +469,7 @@ struct Formula : FE, Printable {
         self.v2=v2
     }
     
-    func values(_ vars: [Variable : M]=[:]) -> [M] {
+    func values(vars: [Variable : M]) -> [M] {
         if let n = v2 {
             return combineVariables(v1, n, vars)
         } else {

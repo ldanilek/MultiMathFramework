@@ -15,6 +15,10 @@ struct C {
     //a+bi
     var a: Double = 0
     var b: Double = 0
+    init(a: Double, b: Double) {
+        self.a = a
+        self.b = b
+    }
 }
 
 extension C : Similarity {
@@ -28,6 +32,31 @@ extension C : Similarity {
     }
 }
 
+extension C : Printable {
+    var description: String {
+        if a==0 {
+            return "\(b)i"
+        }
+        if b==0 {
+            return "\(a)"
+        }
+        if b<0 {
+            return "\(a)\(b)i"
+        }
+        return "\(a)+\(b)i"
+    }
+    init() {
+        self.a = 0.0
+        self.b = 0
+    }
+}
+
+extension C: CFE {
+    func computed(_ vars: [Variable: C]=[:]) -> C {
+        return self
+    }
+}
+
 extension Double : Similarity {
     
 }
@@ -37,7 +66,9 @@ func / (c: C, r: Double) -> C {
     return C(a: c.a/r, b: c.b/r)
 }
 func / (r: Double, c: C) -> C {
-    return C(a: (c.a*r)/(c.a*c.a+c.b*c.b), b: -(r*c.b)/(c.a*c.a+c.b*c.b))
+    var ad: Double = (c.a*r)/(c.a*c.a+c.b*c.b)
+    var bd: Double = -(r*c.b)/(c.a*c.a+c.b*c.b)
+    return C(a: ad, b: bd)
 }
 func / (c: C, i: Int) -> C {
     return C(a: (c.a/Double(i)), b: (c.b/Double(i)))
@@ -257,5 +288,96 @@ prefix func √ (x: Double) -> Double {
 }
 prefix func √ (c: C) -> C {
     return sqrt(c)
+}
+
+//complex formula expression, which can be a variable, complex formula, or complex number
+protocol CFE : Printable {
+    func computed(vars: [Variable: C]) -> C
+}
+
+struct ComplexFormula : CFE {
+    let op: Operation
+    let v1: CFE
+    let v2: CFE?
+    
+    init(_ op: Operation, _ v1: CFE, _ v2: CFE? = nil) {
+        self.op=op
+        self.v1=v1
+        self.v2=v2
+    }
+    
+    //If error is not needed, like when calculating the partial derivative, use this function instead
+    func computed(_ vars: [Variable: C]=[:]) -> C {
+        var val = C()
+        var m = v1.computed(vars)
+        var n: C! = v2?.computed(vars)
+        //since the error of val will be ignored, since it's wrong, don't bother calculating it here.
+        switch op {
+        case .Identity:
+            val = m
+        case .Multiply:
+            val = m*n
+        case .Divide:
+            val = m/n
+        case .Add:
+            val = m+n
+        case .Subtract:
+            val = m-n
+        case .Negate:
+            val = -m
+        case .Power:
+            val = m**n
+        case .Ln:
+            val = log(m)
+        case .Reciprocal:
+            val = 1/m
+        case .Cos:
+            val = cos(m)
+        case .Sin:
+            val = sin(m)
+        case .Tan:
+            val = tan(m)
+        case .Exp:
+            val = exp(m)
+        case .Sqrt:
+            val = sqrt(m)
+        }
+        return val
+    }
+    
+    var description: String {
+        var m = v1.description
+        var n: String! = v2?.description
+        switch op {
+        case .Identity:
+            return m
+        case .Add:
+            return "(\(m))+(\(n))"
+        case .Subtract:
+            return "(\(m))-(\(n))"
+        case .Divide:
+            return "(\(m))/(\(n))"
+        case .Multiply:
+            return "(\(m))*(\(n))"
+        case .Power:
+            return "(\(m))^(\(n))"
+        case .Reciprocal:
+            return "1/(\(m))"
+        case .Ln:
+            return "ln(\(m))"
+        case .Negate:
+            return "-(\(m))"
+        case .Sin:
+            return "sin(\(m))"
+        case .Cos:
+            return "cos(\(m))"
+        case .Tan:
+            return "tan(\(m))"
+        case .Sqrt:
+            return "sqrt(\(m))"
+        case .Exp:
+            return "exp(\(m))"
+        }
+    }
 }
 

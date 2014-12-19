@@ -43,6 +43,17 @@ class StringMathTests: XCTestCase {
     func testPhantom() {
         XCTAssert("5cos(3/2)".computed().v ~~ 0.3537, "phantom!")
     }
+    func testVariable() {
+        XCTAssert("5*x".computed(["x": Formula(.Identity, M(3))]).v ~~ 15.0, "variable substitution")
+        XCTAssert("3x+4cos(y)".computed(["x": Formula(.Identity, M(7.2)), "y": Formula(.Identity, M(2))]).v ~~ 19.9354, "multiple variables, phantom")
+    }
+    func testComplex() {
+        XCTAssert("4i+3".complexComputed() ~~ 4*i+3, "complex")
+        XCTAssert("i^i".complexComputed() ~~ 1.0/sqrt(e**pi), "i to the i")
+    }
+    func testComplexVariables() {
+        XCTAssert("xi".complexComputed(["x":C(a:5, b:2)]) ~~ -2+5*i, "variable times i")
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

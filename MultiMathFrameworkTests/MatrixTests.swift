@@ -121,5 +121,16 @@ class MatrixTests: XCTestCase {
             println()
         }
     }
-
+    
+    func testPerformanceHW8() {
+        self.measureBlock {
+            var A = Matrix(rows: 3, values:[1, 1, 3, 6, 2, 2, -1, 0, 4, 1, 4, 1, 6, 16, 5])
+            var steps = A.toStrongEchelon()
+            for step in steps {
+                println(step)
+            }
+            println()
+        }
+    }
+    
 }
