@@ -276,3 +276,11 @@ func * (a: Matrix, b: Matrix) -> Matrix {
     }
     return product
 }
+
+func tr(a: Matrix) -> Double {
+  var sum = 0.0;
+  for i in 0..<a.rows {
+    sum += a[i,i];
+  }
+  return sum;
+}

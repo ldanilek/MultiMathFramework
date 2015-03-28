@@ -132,5 +132,48 @@ class MatrixTests: XCTestCase {
             println()
         }
     }
+  
+  func testTrace() {
+    var n: Int;
+    n = 10;
+    var matrix = Matrix(rows: n, columns: n);
+    for i in 0..<n {
+      for j in 0..<n {
+        matrix[i, j]=Double(arc4random_uniform(100))/50-1;
+      }
+    }
+    var trace = tr(matrix*matrix);
+    println("trace is \(trace)")
+    var sum = 0.0
+    for i in 0..<n {
+      sum += matrix[i, i]*matrix[i, i];
+    }
+    for i in 0..<n-1 {
+      for j in i+1..<n {
+        var above = matrix[i,j];
+        var below = matrix[j,i];
+        sum += 2*matrix[i, j]*matrix[j, i];
+      }
+    }
+    println("other trace \(sum)")
+    func sqr(x: Double) -> Double {
+      return x*x;
+    }
+    var third: Double;
+    third = 0;
+    for i in 0..<n-1 {
+      for j in i+1..<n {
+        var above = matrix[i,j];
+        var below = matrix[j,i];
+        third += sqr(above/2 + below) - sqr(above/2 - below);
+      }
+    }
+    for i in 0..<n {
+      third += sqr(matrix[i,i]);
+    }
+    println("third trace \(third)");
+    //they should all be the same
+    println()
+  }
     
 }
